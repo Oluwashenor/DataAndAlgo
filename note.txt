@@ -1,0 +1,121 @@
+﻿Complexity in Big O
+
+-O(1)
+-O(log n)
+-O(n)
+-O(n log n)
+-O(n^2)
+-O(2^n)
+
+
+
+Complexity 0(1)
+Means it take sone step to complete
+A = b+c
+C= 1+8
+
+**Complexity 0(log n)
+	times goes up linearly and n goes up exponentially 
+	1 sec to compute 10 element : 10^1
+	2 sec to compute 100 element  : 10^2
+	3 sec to compute 1000 element   : 10^3
+
+	for(int i=1;i<=n;i=i*3){
+	print"hello";
+	}
+	log base 3
+
+
+** Complexity 0(n)
+for(int i=0;i<n;i++){
+		print"hello";
+}
+
+
+** Complexity O(n log n)
+for(int i=0;i<n;i++){     n
+	for(int j = 1;j<n;j=j*2){
+		print"hello";
+	}
+}
+
+**Complexity 0(n^2)
+for(int i = 0; i < n; i++){
+	for (int j = 0; j < n; j = j + 2){
+	print("Hello");
+	}
+}
+
+
+Complexity O(2^n)
+int fibonacci(int number){
+if(number <= 1)return number;
+return fibonacci (number -2)+ fibonacci (number-1);
+}
+
+Big O is the worst scenario
+
+
+Array
+int takes 4 bytes
+
+
+What does it mean when we say that an algorithm A is asymptotically more efficient than B?
+it means A would be a better choice for all inputs except small inputs
+
+
+Linked List 
+It solves the limitation problem of the array., arrays are defined to size
+with link list it uses a pointer to point to the next element 
+
+[n] > [a] > [b] > [c] > [d] null
+[0]   [10]  [15]  [67]  [10]
+[a]   [b]   [c]   [d]   [null]
+
+each above is a node
+
+there are 3 types of linked list 
+- singly linked list
+- double linked list 
+- circular linked list 
+
+_singly linked list 
+it has two modules, it has value module and the next module that point to the next value module in the list
+first node is head node 
+class Node{
+	int value;
+	Node next;
+}
+
+-double linked list 
+unlike the singly linked list has 3 modules. one for the value, another is the pointer to the next item in the list and the
+other is the channel to the previous value in the list.
+class Node{
+int v;
+Node prev;
+Node next;
+}
+
+a memory effcient Doubly linked list also know as XOR linked list 
+instead of 3 sections a XOR linked list has only 2 sections 
+
+
+
+
+
+linked list vs array 
+linked are better
+-if you need constant insertion and deletion from the list 
+- if you dont know how many children will be in the list 
+- you dont need random access to any element 
+- you want to be able to insert items in the middle of list
+
+
+array are better if 
+- you need indexed/ random access to the element 
+- you know the number of elements in the array
+- you need the speed when iterating through all the elements in the sequence
+- memory is a concern (array are mo)
+
+
+Circular linked list is a list where all the nodes are connected to form a circle.
