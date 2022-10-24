@@ -119,3 +119,85 @@ array are better if
 
 
 Circular linked list is a list where all the nodes are connected to form a circle.
+
+
+
+
+------------------------
+Hash Table (AKA Hash Map) 
+-------------------------
+Hash table is a data strucutre it is used to store key value pair. 
+Data is stored in array format. each data value is its own unique unique index value.
+
+C# has dictionary, StringDictionary, HashTable
+
+int hash(string key){
+//lets say we pass Italy
+//first convert each of them to ascii
+I = 73;
+t = 116;
+a = 97;
+l = 108
+y  = 121;
+total 515;
+index = hashcode % sizeOfArray  = 515 % 6 = 5;
+
+}
+Hash a=function should be simple
+should return the sme result for the same input
+
+Handling Collision 
+- seperate chaining 
+- open addressing 
+
+
+seperate chaining 
+AB -> index 1
+Bb -> 4
+PR-> 2;
+Ca -> 4
+
+since Bb and  Ca are both 4, we can use array or linked list data structure to store data on original array
+so at index 4, we store 1 linked list object then the original element is added to the linked list then the new value 
+is added to the next node on the linked list.
+
+
+Open Addressing 
+AB -> index 1
+Bb -> 4
+PR-> 2;
+Ca -> 4
+
+it will store in the next availbale free space , since index 4 is already occupied , it takes it to 5 , if 5 is not free, and that is the last index of the array, it moves back to the beginning,   
+
+
+Stacks
+is a data structure , element last is access first 
+
+stack uses LIFO(Last In First Out) and FILO(First In Last Out) pattern
+push and pop
+
+top - shows the element at the top
+size - shows the number of elements stored in the stack
+
+9
+7
+2 
+5 
+
+()
+underflow - trying to pop out an element from an empty stack 
+overflow - trying to push an element into a full stack
+
+
+Queue 
+is a linear structure. First in First Out(FIFO) and LILO
+
+Empty Queue
+rear
+[]  []  []  []  []
+front
+
+					 rear
+ [0]  [1]  [2]  [3]  [4]
+front

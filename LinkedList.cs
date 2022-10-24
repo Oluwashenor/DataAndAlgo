@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAndAlgo
 {
-    class LinkedListNode
+   public class LinkedListNode
     {
         public int data;
         public LinkedListNode next;
@@ -28,12 +28,23 @@ namespace DataAndAlgo
             head = null;
             count = 0;
         }
-        public void AddNodeToFront(int data)
+
+        public void insert(LinkedList list, int data)
         {
-            LinkedListNode node = new LinkedListNode(data);
-            node.next = head;
-            head = node;
-            count++;
+            LinkedListNode newNode = new LinkedListNode(data);
+            if(head == null)
+            {
+                list.head = newNode;
+            }
+            else
+            {
+                LinkedListNode lastNode = list.head;
+                while(lastNode.next != null)
+                {
+                    lastNode=lastNode.next;
+                }
+                lastNode.next = newNode;
+            }
         }
 
         public void PrintList()
@@ -41,7 +52,7 @@ namespace DataAndAlgo
             LinkedListNode runner = head;
             while(runner != null)
             {
-                Console.WriteLine(runner.data);
+                Console.Write(runner.data + " ");
                 runner = runner.next;   
             }
         }
